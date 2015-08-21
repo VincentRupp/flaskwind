@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Enter Parameters for Analysis</h1>
+<form action="" method="post" name="input">
+    {{ form.hidden_tag() }}
+    <p>Enter the state <br>
+        {{ form.state(size=2) }}<br>
+        {% for error in form.state.errors %}
+            <span style="color:red;">[{{ error }}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>Enter the start date<br>
+        {{ form.from_date() }}<br>
+        {% for error in form.from_date.errors %}
+            <span style="color:red;">[{{ error }}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>Enter the end date<br>
+        {{ form.to_date() }}<br>
+        {% for error in form.to_date.errors %}
+            <span style="color:red;">[{{ error }}]</span>
+        {% endfor %}<br>
+    </p>
+    <p><input type="submit" value="Go"></p>
+</form>
+{% endblock %}
