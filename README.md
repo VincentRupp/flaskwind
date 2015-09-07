@@ -1,2 +1,2 @@
 # flaskwind
-nothing private
+The next commit had propietary code. Moving to private repo on bitbucket.
